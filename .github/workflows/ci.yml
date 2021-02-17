@@ -351,6 +351,7 @@ jobs:
           HEADERS_ONLY: ${{ matrix.headers_only }}
           TRAVIS_COMPILER: ${{ matrix.travis_compiler }}
           TRAVIS_BRANCH: ${{ github.base_ref }}
+          TRAVIS_OS_NAME: "linux"
         run: |
           echo '==================================> SETUP'
           if [ -n "$GHA_CONTAINER" ]; then
@@ -505,6 +506,7 @@ jobs:
           HEADERS_ONLY: ${{ matrix.headers_only }}
           TRAVIS_COMPILER: ${{ matrix.travis_compiler }}
           TRAVIS_BRANCH: ${{ github.base_ref }}
+          TRAVIS_OS_NAME: "osx"
         run: |
           echo '==================================> SETUP'
           set -ex
